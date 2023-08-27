@@ -6,12 +6,12 @@ public class Driver : MonoBehaviour
 {
     private void Start()
     {
-        transform.Rotate(0, 0, 45f);
     }
 
     private void Update()
     {
-        transform.Rotate(0, 0, 0.1f);
+        transform.Rotate(0f, 0f, 0.1f);
+        transform.Translate(0f, 0.01f, 0f);
     }
     
     
