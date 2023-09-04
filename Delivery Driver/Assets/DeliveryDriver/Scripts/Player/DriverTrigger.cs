@@ -13,9 +13,14 @@ public class DriverTrigger : MonoBehaviour
     [SerializeField] private Color32 dropPackageColor = new Color32(1, 1, 1, 1);
 
     private SpriteRenderer spriteRenderer = null;
+    [SerializeField]
+    private Driver driver = null;
+ 
+    [SerializeField] private float boostSpeed = 20f;
     private void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
+        driver = GetComponent<Driver>();
     }
 
     /// <summary>
@@ -39,6 +44,14 @@ public class DriverTrigger : MonoBehaviour
             hasPackage = false;
             spriteRenderer.color = dropPackageColor;
         }
+
+        if (other.gameObject.tag == "Boost")
+        {
+            driver.moveSpeed = boostSpeed;
+        }
+         
+        
+        
         
     }
 

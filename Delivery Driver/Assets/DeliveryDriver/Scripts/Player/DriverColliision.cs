@@ -5,8 +5,16 @@ using UnityEngine;
 
 public class DriverColliision : MonoBehaviour
 {
+
+    private Driver driver = null;
+    [SerializeField] private float slowSpeed = 5f;
+    private void Start()
+    {
+        driver = GetComponent<Driver>();
+    }
+
     private void OnCollisionEnter2D(Collision2D other)
     {
-        Debug.Log("부딪힘!");
+        driver.moveSpeed = slowSpeed;
     }
 }
