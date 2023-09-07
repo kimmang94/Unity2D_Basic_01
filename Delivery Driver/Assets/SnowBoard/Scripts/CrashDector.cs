@@ -6,11 +6,19 @@ using UnityEngine.SceneManagement;
 
 public class CrashDector : MonoBehaviour
 {
+    private float loadDelay = 1f;
+    
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.tag == "Ground")
         {
-            SceneManager.LoadScene("Snow Boarder Game");
+            Invoke("ReloadScene", loadDelay );
         }
+    }
+    
+    
+    private void ReloadScene()
+    {
+        SceneManager.LoadScene("Snow Boarder Game");
     }
 }
