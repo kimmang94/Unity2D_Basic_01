@@ -12,9 +12,6 @@ public class FinishLine : MonoBehaviour
         {
             SceneManager.LoadScene("Snow Boarder Game");
         }
-        else
-        {
-            
-        }
+
     }
 }
