@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Main Scene.unity
     guid: 6479e0280ed0cdf46af97c1606e3f763
   - enabled: 1
+    path: Assets/Scenes/GameSelectScene.unity
+    guid: 89ef3e3531437474783637b30f84aa70
+  - enabled: 1
     path: Assets/Scenes/Delivery Driver Game.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
