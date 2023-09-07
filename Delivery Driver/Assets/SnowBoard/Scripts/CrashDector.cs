@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CrashDector : MonoBehaviour
 {
@@ -9,7 +10,7 @@ public class CrashDector : MonoBehaviour
     {
         if (other.gameObject.tag == "Ground")
         {
-            Debug.Log("Hit my Head");
+            SceneManager.LoadScene("Snow Boarder Game");
         }
     }
 }
