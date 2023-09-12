@@ -10,10 +10,12 @@ public class CrashDector : MonoBehaviour
     [SerializeField] private ParticleSystem playerPaticle = null;
     [SerializeField] private AudioClip crashSFX = null;
 
+    private bool hasCrashed = false;
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Ground")
+        if (other.gameObject.tag == "Ground" && !hasCrashed)
         {
+            hasCrashed = true;
             playerPaticle.Play();
             GetComponent<AudioSource>().PlayOneShot(crashSFX);
             Invoke("ReloadScene", loadDelay );
