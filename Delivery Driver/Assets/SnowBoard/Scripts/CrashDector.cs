@@ -17,7 +17,9 @@ public class CrashDector : MonoBehaviour
         }
     }
     
-    
+    /// <summary>
+    /// Scene 을 로드하기 위한 기능
+    /// </summary>
     private void ReloadScene()
     {
         SceneManager.LoadScene("Snow Boarder Game");
