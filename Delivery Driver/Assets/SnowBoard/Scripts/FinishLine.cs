@@ -11,11 +11,15 @@ public class FinishLine : MonoBehaviour
 
     [SerializeField] 
     private ParticleSystem finishEffect = null;
+
+    [SerializeField] private AudioSource audioSource = null;
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.tag == "Player")
         {
             finishEffect.Play();
+            audioSource.Play();
+            
             Invoke("ReloadScene", loadDelay);
         }
 
