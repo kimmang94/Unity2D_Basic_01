@@ -10,6 +10,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float boostSpeed = 100f;
     [SerializeField] private float baseSpeed = 15f;
     private SurfaceEffector2D surfaceEffector2D = null;
+
+    private bool canMove = true;
     
     private void Start()
     { 
@@ -20,9 +22,19 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        RotatePlayer();
-        RespondToBoost();
+        if (canMove)
+        {
+            RotatePlayer();
+            RespondToBoost();
+        }
+
     }
+
+    public void DisableControlls()
+    {
+        canMove = false;
+    }
+    
 
     /// <summary>
     /// 플레이어 회전에 관한 함수 (좌 우 방향키를 클릭해 해당 방향으로 회전)
