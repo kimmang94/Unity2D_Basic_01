@@ -18,9 +18,7 @@ public class DustTail : MonoBehaviour
 
     private void OnCollisionExit2D(Collision2D other)
     {
-        Debug.Log("탈출");
         moveParticle.Stop();
-        
-        
+
     }
 }
